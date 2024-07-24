@@ -55,7 +55,7 @@ public class main {
         try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
             Random random = new Random();
             for (int i = 1; i <= count; i++) {
-                pstmt.setInt(1, random.nextInt(100000)); // Rastgele ID değeri
+                pstmt.setInt(1, random.nextInt(100000)); 
                 pstmt.addBatch();
             }
             pstmt.executeBatch();
